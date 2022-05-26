@@ -1,13 +1,35 @@
 
-<section id="two">
-    <div class="container">
+    <div class="text-center">
         <h3>Educación</h3>
-        <h1 > aca deberia aparecer educacion</h1>
-            <p> aca y </p>
-            <p *ngIf="this.educacion">
-            {{this.educacion.tituloEd}}
-            </p>
-            
-        </div>
-</section>
+        <button type="button" class="btn btn-success" (click)="onOpenModal('add')">
+            <a class="nav-link" style="color:rgb(9, 74, 74)">
+            agregar educación <span class="sr-only"> (current) </span>
+            </a>
+        </button>
+    </div>
+    
+    <div *ngFor="let edu of educaciones">  
+        
+        <p></p>
+        <h1 > {{edu.tituloEd}} ----> <a
+        class="btn btn-primary tooltips"
+        data-placement="top"
+        data-toggle="tooltips"
+        data-original-title="edit"
+        class="fa fa-pencil"
+        ></a> -|- <a
+        class="btn btn-secondary tooltips"
+        data-placement="top"
+        data-toggle="tooltips"
+        data-original-title="delete"
+        class="fa fa-times"
+        ></a> </h1>
+       
+        <i>{{edu.institucionEd}} || {{edu.periodoEd}} </i>
+
+        
+    
+    </div>
+    
+
 
